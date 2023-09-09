@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Assign a random number to the variable n each time it's executed.
  *
  * Return: Always 0 (Success)
  */
@@ -10,16 +10,15 @@ int main(void)
 {
     int n;
 
-    /* The initialization of n with a random number is assumed here. 
-       This is usually done with some functions like rand(), srand() etc. 
-       Since you mentioned not to touch that part, it's not included here. */
-
+    srand(time(0));
+    n = rand() - RAND_MAX / 2;
+    
     if (n > 0)
         printf("%d is positive\n", n);
-    else if (n == 0)
-        printf("%d is zero\n", n);
-    else
+    else if (n < 0)
         printf("%d is negative\n", n);
+    else
+        printf("%d is zero\n", n);
 
     return (0);
 }
