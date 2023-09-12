@@ -1,8 +1,10 @@
-#include <stdio.h>
+#include "main.h"
 
-/* Prototype for the _putchar function */
-int _putchar(char c);
-
+/**
+ * main - Prints "_putchar" followed by a newline.
+ *
+ * Return: Always 0 (success).
+ */
 int main(void)
 {
     char str[] = "_putchar\n";
