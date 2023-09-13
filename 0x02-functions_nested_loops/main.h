@@ -1,14 +1,10 @@
-#ifndef _MAIN_H
-#define _MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
 
-/*
- * File: main.h
- * Auth: Farah Soltani
- * Desc: Header file containing declarations for all functions
- *       used in the 0x02-functions_nested_loops project.
- */
+#include <unistd.h>
 
-int _putchar(char c);
 void print_alphabet(void);
+void print_alphabet_x10(void);
+int _putchar(char c);
 
-#endif
+#endif /* MAIN_H */
