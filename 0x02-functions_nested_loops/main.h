@@ -1,12 +1,14 @@
-#include <stdio.h>
-/**
- * main - Entry point of the program
- *
- * Return: 0 for successful execution, non-zero for errors
+#ifndef _MAIN_H
+#define _MAIN_H
+
+/*
+ * File: main.h
+ * Auth: Farah Soltani
+ * Desc: Header file containing declarations for all functions
+ *       used in the 0x02-functions_nested_loops project.
  */
-int main(void)
-{
-    int _putchar(char c);
-    printf("_putchar\n");
-    return (0);
-}
+
+int _putchar(char c);
+void print_alphabet(void);
+
+#endif
