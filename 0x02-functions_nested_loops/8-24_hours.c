@@ -21,7 +21,7 @@ _putchar(':');
 _putchar((j / 10) + '0');
 _putchar((j % 10);
 _putchar('\n');
-j++
+j++;
 }
 i++;
 }
