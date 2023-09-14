@@ -23,9 +23,6 @@ void print_diagonal(int n);
 void print_square(int size);
 int main(void);
 void print_triangle(int size);
-void _putchar(char c);
 void print_number(int n);
-
-/* Add other function prototypes below */
 
 #endif /* MAIN_H */
