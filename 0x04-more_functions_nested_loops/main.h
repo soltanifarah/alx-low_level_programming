@@ -12,6 +12,7 @@ int _putchar(char c);
  * For instance:
  */
  
+int _isdigit(int c);
 int _isupper(int c);
 
 /* Add other function prototypes below */
