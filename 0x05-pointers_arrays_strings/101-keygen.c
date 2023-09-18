@@ -14,6 +14,7 @@ fprintf(stderr, "Error: password length exceeds the maximum allowed length.\n");
 return 1;
 }
 int i;
+
 for (i = 0; i < password_length; i++)
 {
 password[i] = 'A' + (i % 26); /* dummy logic to generate password characters for the example */
