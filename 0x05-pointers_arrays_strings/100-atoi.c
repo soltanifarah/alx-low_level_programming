@@ -27,7 +27,7 @@ i++;
 }
 
 if (found_digit)
-return num;
+return (num);
 
-return 0;
+return (0);
 }
