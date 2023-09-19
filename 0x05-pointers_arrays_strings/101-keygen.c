@@ -1,29 +1,54 @@
-#include <stdio.h>
-
-#define MAX_PASSWORD_LENGTH 100
-
-int main(void)
-{
-char password[MAX_PASSWORD_LENGTH + 1];
-int password_length;
-
-password_length = 10; /* Assign this based on your logic. */
-if (password_length > MAX_PASSWORD_LENGTH)
-{
-fprintf(stderr, "Error: password length exceeds the maximum allowed length.\n");
-return 1;
-}
-int i;
-
-for (i = 0; i < password_length; i++)
-{
-password[i] = 'A' + (i % 26); /* dummy logic to generate password characters for the example */
-}
-password[password_length] = '\0'; /* Null-terminate the string */
-printf("Generated Password: %s\n", password);
-if (password[0] == 'A') /* Dummy if condition for the example. Replace or remove based on your requirements. */
-{
-printf("Password starts with an A\n");
-}
-return 0;
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <time.h> 
+ 
+/** 
+ * main - Generates random valid passwords for the 
+ *        program 101-crackme. 
+ * 
+ * Return: Always 0. 
+ */ 
+int main(void) 
+{ 
+ char password[84]; 
+ int index = 0, sum = 0, diff_half1, diff_half2; 
+ 
+ srand(time(0)); 
+ 
+ while (sum < 2772) 
+ { 
+  password[index] = 33 + rand() % 94; 
+  sum += password[index++]; 
+ } 
+ 
+ password[index] = '\0'; 
+ 
+ if (sum != 2772) 
+ { 
+  diff_half1 = (sum - 2772) / 2; 
+  diff_half2 = (sum - 2772) / 2; 
+  if ((sum - 2772) % 2 != 0) 
+   diff_half1++; 
+ 
+  for (index = 0; password[index]; index++) 
+  { 
+   if (password[index] >= (33 + diff_half1)) 
+   { 
+    password[index] -= diff_half1; 
+    break; 
+   } 
+  } 
+  for (index = 0; password[index]; index++) 
+  { 
+   if (password[index] >= (33 + diff_half2)) 
+   { 
+    password[index] -= diff_half2; 
+    break; 
+   } 
+  } 
+ } 
+ 
+ printf("%s", password); 
+ 
+ return (0); 
 }
