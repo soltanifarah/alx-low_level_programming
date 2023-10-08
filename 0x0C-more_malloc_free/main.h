@@ -4,6 +4,5 @@
 #include <stddef.h>
 
 void *_malloc_checked(unsigned int b);
-int _putchar(char c);
 
 #endif /* MAIN_H */
