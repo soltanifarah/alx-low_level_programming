@@ -1,14 +1,19 @@
-#ifndef LISTS_H
-#define LISTS_H
+#ifndef MAIN_H
+#define MAIN_H
 
-#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
- * struct list_s - singly linked list
- * @str: string (malloc'ed string)
- * @len: length of the string
- * @next: points to the next node
+ * struct list_s - Singly linked list
+ * @str: String (malloc'ed string)
+ * @len: Length of the string
+ * @next: Points to the next node
+ *
+ * Description: Singly linked list node structure.
  */
+
 typedef struct list_s
 {
     char *str;
@@ -16,7 +21,11 @@ typedef struct list_s
     struct list_s *next;
 } list_t;
 
-/* Function prototype for print_list */
+/* Function prototypes for the tasks */
 size_t print_list(const list_t *h);
+size_t list_len(const list_t *h);
+list_t *add_node(list_t **head, const char *str);
+list_t *add_node_end(list_t **head, const char *str);
+void free_list(list_t *head);
 
-#endif /* LISTS_H */
+#endif /* MAIN_H */
